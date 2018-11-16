@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id="wrap">
+            <span id="hint">You can change the location by click on the citsay name!</span>
+            <div id="weather-wrap">
+                <div id="inner-wrap">
+                    <form action="" id="getCity" method="get">
+                        <input type="text" id="cityInput" placeholder="enter city">
+                        <input type="submit" value="GO" id="subCity">
+                    </form>
+                    <div id="locationWrap">
+                        <a href="#" class="location-icon"></a>
+                        <a href="#" id="location"></a>
+                        <span class="icon"></span>
+                    </div>
+                    <div class="temperature"></div>
+                    <div class="underline"></div>
+                    <div class="metaNfo">
+                        <span>condition:</span>
+                        <span class="condition"></span>
+                    </div>
+                    <div class="metaNfo">
+                        <span>humidity:</span>
+                        <span class="minTemp"></span>
+                    </div>
+                    <div class="metaNfo">
+                        <span>pressure:</span>
+                        <span class="maxTemp"></span>
+                    </div>
+                    <div class="metaNfo">
+                        <span>wind:</span>
+                        <span class="wind"></span>
+                    </div>
+                    <span class="nexD">
+                        <span class="date dateAfterOne"></span>
+                        <span class="tempAfterOne"></span>
+                        <span class="iconAfterOne"></span>
+                        <span class="mainAfterOne"></span>
+                    </span>
+                    <div class="nexD dayTwo">
+                        <span class="date dateAfterTwo"></span>
+                        <span class="tempAfterTwo"></span>
+                        <span class="iconAfterTwo"></span>
+                        <span class="mainAfterTwo"></span>
+                    </div>
+                    <div class="nexD">
+                        <span class="date dateAfterThree"></span>
+                        <span class="tempAfterThree"></span>
+                        <span class="iconAfterThree"></span>
+                        <span class="mainAfterThree"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script
+        src="http://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
