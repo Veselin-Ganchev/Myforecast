@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forecast</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+        <main>
+            <div id="weatherWrap">
+                <div id="searchLoc">
+                    <img src="images/fcastlogo.png" alt="logo" class="icon">
+                    <div id="loadImg">
+                        <img src="images/lg.palette-rotating-ring-loader.gif" alt="load">
+                        Please wait...
+                    </div>
+                    <span>
+                        <h3>Enter name of a city and press search:</h3>
+                    </span>
+                    <input type="text" autocomplete="off" id="cityName">
+                    <button type="submit" class="btn btn-success" disabled>Search</button>
+                    <div>Recent searches:</div>
+                    <div class="history"></div>
+                </div>
+                <div id="weatherApp">
+                    <img src="images/fcastlogo.png" alt="image" class="icon">
+                    <span class="cityDate">
+                        <h2 class="cityName"></h2>
+                    </span>
+                    <span class="weatherCond">
+                        <img class="weatherIcon">
+                        <span class="temperature"></span>
+                    </span>
+                    <span class="cityDate">
+                        <p class="timeDate"></p>
+                    </span>
+                    <span class="weatherCondTwo">
+                        <p class="condition"></p>
+                    </span>
+                    <div class="infoTogOne">
+                        <button type="button" class="todayToggle">Today</button>
+                        <button type="button" class="weekToggle">Week</button>
+                    </div>
+                    <div class="infoTogTwo">
+                        <button type="button" class="btn-primary">7 days forecast</button>
+                    </div>
+                    <div id="todayFcast">
+                        <div class="todayPoints">
+                            <span>feels like</span>
+                            <span>wind</span>
+                            <span>humidity</span>
+                        </div>
+                        <div id="todayValues">
+                            <span class="feelsTemp"></span>
+                            <span class="windSpd"></span>
+                            <span class="humidity"></span>
+                        </div>
+                    </div>
+                    <div id="fCastTable">
+                        <div>
+                            <table id="dateForc"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="error" style="display: none">
+                <h2>City not found, try another city!</h2>
+                <button type="button" class="btn btn-warning backBtn">back</button>
+            </div>
+        </main>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
