@@ -1,0 +1,233 @@
+body{
+  background: url("../images/bgr-1.jpg");
+  background-size: cover;
+}
+#weatherWrap{
+  padding: 1% 5%;
+  text-transform: uppercase;
+  width: 80vw;
+  min-height: 100vh;
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #1e5799 0%, #7db9e8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #1e5799 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #1e5799 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  margin: 0 auto;
+  color: white;
+  p{
+    display: inline;
+    font-size: 1.5em;
+  }
+  h2 {
+    display: inline-block;
+    font-size: 2em;
+  }
+  .history a{
+    text-decoration: none;
+    color: #e0d600;
+    &:hover{
+      color: #ffa600;
+    }
+  }
+}
+
+#searchLoc{
+  padding-top: 5%;
+  text-align: center;
+  span{
+    text-align: left;
+  }
+  h3{
+    padding-left: 10%;
+    font-size: .8em;
+    text-align: left;
+  }
+  input {
+    font-size: 2em;
+    width: 80%;
+    margin-bottom: 5%;
+    &:focus{
+      border: 2px solid #e0d600;
+    }
+  }
+  button{
+    display: block;
+    margin: 0 auto 10%;
+    min-width: 15vw;
+    height: 10vh;
+    background: #ea5507; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #ea5507 2%, #fb955e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5507', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */;
+  }
+}
+
+.icon{
+  display: block;
+  height: 8em;
+  margin: 0 auto;
+}
+
+#loadImg img{
+  height: 8em;
+}
+
+#weatherApp{
+  display: none;
+  .cityDate{
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+
+  }
+  .weatherCond{
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+    img{
+      width: 3em;
+      height: 3em;
+    }
+    span{
+      display: inline-block;
+      font-size: 2em;
+      margin: 0 0 0 5px;
+    }
+  }
+  .weatherCondTwo{
+    display: inline-block;
+    width: 49%;
+    text-align: right;
+  }
+  #todayFcast{
+    width: 55%;
+    margin: auto;
+    font-size: .7em;
+    div{
+      display: inline-block;
+      width: 48%;
+    }
+    span{
+      margin: 20px 0;
+      display: block;
+      font-size: 1.8em;
+    }
+    .todayPoints{
+      text-align: left;
+    }
+    #todayValues{
+      text-align: right;
+    }
+
+    .feelsTemp, .windSpd, .humidity{
+      display: block;
+      width: 100%;
+    }
+  }
+  #fCastTable{
+    display: none;
+    width: 60%;
+    margin: auto;
+    tr{
+      border-bottom: 1px solid #5a6268;
+      .dayTemp{
+        font-size: 1em;
+      }
+      img{
+        width: 3em;
+      }
+    }
+    td:first-child{
+      text-align: left;
+    }
+    td:nth-child(2){
+      text-align: right;
+      font-size: .8em;
+      span:nth-child(3){
+        display: block;
+      }
+    }
+  }
+  .infoTogOne{
+    text-align: center;
+    button{
+      width: 20vw;
+      padding: 0;
+      margin: -2px;
+      border: none;
+      background: #ea5507; /* Old browsers */
+      background: -moz-linear-gradient(45deg, #ea5507 2%, #fb955e 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5507', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+    .weekToggle{
+      background: #fb955e; /* Old browsers */
+      background: -moz-linear-gradient(45deg, #fb955e 0%, #ea5507 98%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #fb955e 0%,#ea5507 98%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #fb955e 0%,#ea5507 98%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb955e', endColorstr='#ea5507',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+  }
+  .infoTogTwo{
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    button{
+      outline: none;
+      border: none;
+      background: #ea5507; /* Old browsers */
+      background: -moz-linear-gradient(45deg, #ea5507 2%, #fb955e 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(45deg, #ea5507 2%,#fb955e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5507', endColorstr='#fb955e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    }
+  }
+}
+
+#dateForc{
+  width: 100%;
+}
+
+#error{
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+  padding-top: 10vh;
+  color: #ffffff;
+  text-align: center;
+  background: #1e5799; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #1e5799 0%, #7db9e8 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #1e5799 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #1e5799 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  button{
+    width: 10vw;
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #weatherApp{
+    #todayFcast{
+      width: 100%;
+    }
+    .weatherCondTwo {
+      display: block;
+      text-align: left;
+    }
+    #fCastTable{
+      width: 100%;
+      margin: auto;
+    }
+    .infoTogOne{
+      display: none!important;
+    }
+    .infoTogTwo{
+      display: block;
+    }
+  }
+}
